@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <!-- <titel>VOLUNTEER SIGN-UP Form</titel> -->
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes">
+        <script type = "text/javascript" src="index.js"></script>  
+    </head>
+    <header>
+        <form id="form" action="/viewpage.html" >
+            <div class="col-1-0">Admission Form</div>
+            <div class="line"></div>
+            <div class="col-2-0">
+                <label class="name-1">NAME: *</label>
+                    <div class="sub-1">
+                        <div class="sub-1-0">
+                             <input type="text" id="fname" name="fname" required onkeyup="checking_fname()">
+                             <span id="s1"></span>
+                                <label name="fname">First name:</label>
+                        </div>
+                        <div class="sub-1-1">
+                                <input type="text" id="lname" name="lname" required onkeyup="checking_lname()">
+                                <span id="s2"></span>
+                                 <label name="lname">Last name:</label>
+                        </div>
+                     </div>
+           
+            
+            <div class="tops">
+                <label class="name-1">EMAIL: *</label>
+                <label class="name-2">PHONE NUMBER: *</label>
+                </div>
+                    <div class="sub-1">
+                        <div class="sub-1-0">
+                             <input type="email" id="email"placeholder="ex: myname@example.com"required onkeyup="checking_email()">
+                             <span id="s3"></span>
+                                <label name="email">example@example.com</label>
+                        </div>
+                        <div class="sub-1-1">
+                                <input type="number" id="phone" placeholder="0123456789"required onkeyup="checking_phone()">
+                                <span id="s4"></span>
+                                 <label name="phone">Mobile Number</label>
+                        </div>
+                     </div>
+                                          
+                     </div>
+                     
+                    
+                     <label class="name-1">Gender: *</label>
+                     
+                         <div class="sub-1-2" data-toggle="buttons">
+                            
+                            
+                            <input type="radio" id="male" name="fav_language" value="male" required>
+                            <label for="male"name="t">Male</label>
+                            <input type="radio" id="female" name="fav_language" value="female">
+                            <label for="female"name="t">Female</label>
+                            <input type="radio" id="others" name="fav_language" value="Others">
+                            <label for="others" name="t">Others</label>
+                            <span id="s5"></span>
+                       
+                      </div>
+                      <label class="name-1">DATE OF BIRTH: *</label>
+                     
+                         <div class="sub-1-2">
+                            <input type="date" id="dob" name="dob"required>
+                            <span id="s6"></span>
+                
+                      </div>
+            
+                <label class="name-1">ADDRESS: *</label>
+                    <div class="sub-1">
+                        <div class="sub-1-0">
+                             <input type="address" id="address1"name="large"required onkeyup="checking_address1()">
+                             <span id="s7"></span>
+                                <label name="address">Street Address</label>
+                                
+                        </div>
+                       
+                     </div>
+                    
+            
+            
+              
+                    <div class="sub-1">
+                        <div class="sub-1-0">
+                            
+                             <input type="address" id="address2"name="large"required onkeyup="checking_address2()">
+                             <span id="s8"></span>
+                                <label name="address">Street Address Line 2</label>
+                        </div>
+                       
+                     </div>
+                   
+            
+                    <div class="sub-1">
+                        <div class="sub-1-0">
+                            
+                            <select name="city" id="city" required>
+                                <option value="Vellore">Vellore</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Coimbatore">Coimbatore</option>
+                                <option value="Madurai">Madurai</option>
+                              </select>
+                              <span id="s9"></span>
+                              <label name="city">City</label>
+                        </div>
+                        <div class="sub-1-1-1">
+                           
+                            <select name="state" id="state" required>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Goa">Goa</option>
+                              </select>
+                              <span id="s10"></span>
+                                 <label name="state">State</label>
+                        </div>
+                     </div>
+                    
+                    
+              
+                        <div class="sub-1">
+                            <div class="sub-1-0">
+                               
+                                 <input type="number" id="pincode"name="large1" required onkeyup="checking_pincode()">
+                                 <span id="s11"></span>
+                                    <label name="pincode">Pin code/Zip code</label>
+                            </div>
+                           
+                         </div>
+                         <label class="name-1">COURSE PREFERENC:  *</label>
+                         <div class="sub-1">
+                            <div class="sub-1-0">
+                                <label name="choice">1 ST CHOICE:</label >
+                                <select name="course1" id="course1" required  >
+                                    <option value="NIL">NIL</option>
+                                    <option value="MCA">MCA</option>
+                                    <option value="M.Tech">M.Tech</option>
+                                    <option value="MBA">MBA</option>
+                                    <option value="MSC">MSC</option>
+                                  </select>
+                                  <span id="s12"></span>
+                                  
+                            </div>
+                            
+                         </div>
+                         <div class="sub-1">
+                            <div class="sub-1-0">
+                                <label name="choice">2 ND CHOICE:</label>
+                                <select name="course2" id="course2" required >
+                                    <option value="NIL">NIL</option>
+                                    <option value="MCA">MCA</option>
+                                    <option value="M.Tech">M.Tech</option>
+                                    <option value="MBA">MBA</option>
+                                    <option value="MSC">MSC</option>
+                                  </select>
+                                  <span id="s13"></span>
+                            </div>
+                            
+                         </div>
+                         <div class="sub-1">
+                            <div class="sub-1-0">
+                                <label name="choice">3 RD CHOICE:</label>
+                                <select name="course3" id="course3" required >
+                                    <option value="NIL">NIL</option>
+                                    <option value="MCA">MCA</option>
+                                    <option value="M.Tech">M.Tech</option>
+                                    <option value="MBA">MBA</option>
+                                    <option value="MSC">MSC</option>
+                                  </select>
+                                  <span id="s14"></span>
+                            </div>
+                            
+                         </div>
+                         <label class="name-1">INTRESTED IN:  *</label>
+                     
+                         <div class="sub-1-4" required>
+                            <input class="form-check-input" type="checkbox" value="" id="Sports">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Sports
+                            </label><br>
+                            <input class="form-check-input" type="checkbox" value="" id="Singing">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Singing
+                            </label><br>
+                            <input class="form-check-input" type="checkbox" value="" id="Dance">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Dance
+                            </label><br>
+                            <input class="form-check-input" type="checkbox" value="" id="None" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              None
+                            </label><br>
+                            <span id="s15"></span>
+                
+                         </div>
+                         <div class="sub-11">
+                            <div class="sub-1-3">
+                                <label name="Studentphoto">Student Photo:  *</label>
+                                    <input type="file" id="photo" name="filename"required>
+                                    <span id="s16"></span>
+                            </div>
+                            <div class="sub-1-3">
+                                <label name="sign">Student Sign:  *</label>
+                                    <input type="file" id="sign" name="filename"required>
+                                    <span id="s17"></span>
+                            </div>
+                                              
+                         </div class="sub-1">
+                         <div class="sub-1-3">
+                            <input type = "button" onclick = "myfunction()" value = "Validate" name="submit"><br>
+                            <br>
+                         <button name="submit" type="submit" onclick = "myfunction()">Validate and Preview</button>
+                         </div>
+                         </div>
+                        
+                              
+                         <br>
+                         
+                         
+                         
+            </div>
+                
+        </form>
+        
+    </header>
+</html>
